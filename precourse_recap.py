@@ -1,13 +1,17 @@
 import random
 
-print('Please input an integer between 0 and 10:')
-x = int(input())
+x = -1
 while True:
     if 0 < x < 11:
         break
     else:
         print('Please input an integer between 0 and 10:')
-        x = int(input())
+        try:
+            x = int(input())
+        except:
+            while False:
+                print('Please input an integer between 0 and 10:')
+                x = int(input())
 y = random.randint(0,10)
 
 if x == y:
